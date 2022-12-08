@@ -34,21 +34,21 @@ import { collection, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
 
 function Tables() {
-  const [ columns, setColumns ] = useState([]);
+  const { columns } = authorsTableData;
   const { columns: prCols, rows: prRows } = projectsTableData;
   const [ flows, setFlows ] = useState([]);
   const flowsConnectionRef = collection(db,"flows");
 
   useEffect(() => {
       const getFlows = async() => {
+        console.log("inside getFlows");
         const flows = await getDocs(flowsConnectionRef);
         const flowsData = flows.docs.map((doc)=>({...doc.data()}));
         setFlows(flowsData);
         console.log(flowsData[0]);
-        setColumns(Object.keys(flowsData[0]));
       }
       getFlows()
-  });
+  },[]);
 
   // useEffect(() => {
      
