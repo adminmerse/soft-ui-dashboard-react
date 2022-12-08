@@ -29,10 +29,30 @@ import Table from "examples/Tables/Table";
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
 import projectsTableData from "layouts/tables/data/projectsTableData";
+import { db } from '../../firebase-config';
+import { collection, getDocs } from "firebase/firestore";
+import { useState, useEffect } from "react";
 
 function Tables() {
-  const { columns, rows } = authorsTableData;
+  const [ columns, setColumns ] = useState([]);
   const { columns: prCols, rows: prRows } = projectsTableData;
+  const [ flows, setFlows ] = useState([]);
+  const flowsConnectionRef = collection(db,"flows");
+
+  useEffect(() => {
+      const getFlows = async() => {
+        const flows = await getDocs(flowsConnectionRef);
+        const flowsData = flows.docs.map((doc)=>({...doc.data()}));
+        setFlows(flowsData);
+        console.log(flowsData[0]);
+        setColumns(Object.keys(flowsData[0]));
+      }
+      getFlows()
+  });
+
+  // useEffect(() => {
+     
+  // });
 
   return (
     <DashboardLayout>
@@ -53,7 +73,7 @@ function Tables() {
                 },
               }}
             >
-              <Table columns={columns} rows={rows} />
+              <Table columns={columns} rows={flows} />
             </SoftBox>
           </Card>
         </SoftBox>
