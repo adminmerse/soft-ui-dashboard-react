@@ -43,7 +43,7 @@ function Transaction({ color, icon, name, description, value }) {
             </SoftTypography>
           </SoftBox>
         </SoftBox>
-        <SoftTypography variant="button" color={color} fontWeight="medium" textGradient>
+        <SoftTypography variant="button" color="error" fontWeight="medium" textGradient>
           {value}
         </SoftTypography>
       </SoftBox>

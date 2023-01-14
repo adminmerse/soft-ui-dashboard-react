@@ -30,7 +30,7 @@ function Transactions() {
     <Card sx={{ height: "100%" }}>
       <SoftBox display="flex" justifyContent="space-between" alignItems="center" pt={3} px={2}>
         <SoftTypography variant="h6" fontWeight="medium" textTransform="capitalize">
-          Your Transaction&apos;s
+          Last Run
         </SoftTypography>
         <SoftBox display="flex" alignItems="flex-start">
           <SoftBox color="text" mr={0.5} lineHeight={0}>
@@ -39,7 +39,7 @@ function Transactions() {
             </Icon>
           </SoftBox>
           <SoftTypography variant="button" color="text" fontWeight="regular">
-            23 - 30 March 2020
+            12 Jan 2021, 5:45 AM
           </SoftTypography>
         </SoftBox>
       </SoftBox>
@@ -51,7 +51,7 @@ function Transactions() {
             fontWeight="bold"
             textTransform="uppercase"
           >
-            newest
+            Test Suites
           </SoftTypography>
         </SoftBox>
         <SoftBox
@@ -63,29 +63,19 @@ function Transactions() {
           sx={{ listStyle: "none" }}
         >
           <Transaction
-            color="error"
-            icon="arrow_downward"
-            name="Netflix"
-            description="27 March 2020, at 12:30 PM"
-            value="- $ 2,500"
+            color="info"
+            icon=""
+            name="Login User"
+            description="2 APIs"
+            value="0 failed"
           />
           <Transaction
-            color="success"
-            icon="arrow_upward"
-            name="Apple"
-            description="27 March 2020, at 04:30 AM"
-            value="+ $ 2,000"
+            color="info"
+            icon=""
+            name="Transaction Management"
+            description="13 APIs"
+            value="2 failed"
           />
-        </SoftBox>
-        <SoftBox mt={1} mb={2}>
-          <SoftTypography
-            variant="caption"
-            color="text"
-            fontWeight="bold"
-            textTransform="uppercase"
-          >
-            yesterday
-          </SoftTypography>
         </SoftBox>
         <SoftBox
           component="ul"
@@ -96,32 +86,18 @@ function Transactions() {
           sx={{ listStyle: "none" }}
         >
           <Transaction
-            color="success"
-            icon="arrow_upward"
-            name="Stripe"
-            description="26 March 2020, at 13:45 PM"
-            value="+ $ 750"
+            color="info"
+            icon=""
+            name="Portfolio"
+            description="4 APIs"
+            value="1 failed"
           />
           <Transaction
-            color="success"
-            icon="arrow_upward"
-            name="HubSpot"
-            description="26 March 2020, at 12:30 PM"
-            value="+ $ 1,000"
-          />
-          <Transaction
-            color="success"
-            icon="arrow_upward"
-            name="Creative Tim"
-            description="26 March 2020, at 08:30 AM"
-            value="+ $ 2,500"
-          />
-          <Transaction
-            color="dark"
-            icon="priority_high"
-            name="Webflow"
-            description="26 March 2020, at 05:00 AM"
-            value="Pending"
+            color="info"
+            icon=""
+            name="Multiaccount flow"
+            description="10 APIs"
+            value="2 failed"
           />
         </SoftBox>
       </SoftBox>

@@ -28,29 +28,31 @@ function BillingInformation() {
     <Card id="delete-account">
       <SoftBox pt={3} px={2}>
         <SoftTypography variant="h6" fontWeight="medium">
-          Billing Information
+          Test Runs
         </SoftTypography>
       </SoftBox>
       <SoftBox pt={1} pb={2} px={2}>
         <SoftBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
           <Bill
-            name="oliver liam"
-            company="viking burrito"
-            email="oliver@burrito.com"
-            vat="FRB1235476"
+            name="5 hours ago"
+            company="32"
+            email="0"
+            vat="Low"
+            bgcolor="success"
           />
           <Bill
-            name="lucas harper"
-            company="stone tech zone"
-            email="lucas@stone-tech.com"
-            vat="FRB1235476"
+            name="1 day ago"
+            company="22"
+            email="1"
+            vat="Medium"
+            bgcolor="warning"
           />
           <Bill
-            name="ethan james"
-            company="fiber notion"
-            email="ethan@fiber.com"
-            vat="FRB1235476"
-            noGutter
+            name="36 hours ago"
+            company="18"
+            email="5"
+            vat="High"
+            bgcolor="error"
           />
         </SoftBox>
       </SoftBox>

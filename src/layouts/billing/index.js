@@ -37,11 +37,11 @@ import Transactions from "layouts/billing/components/Transactions";
 function Billing() {
   return (
     <DashboardLayout>
-      <DashboardNavbar />
+      {/* <DashboardNavbar /> */}
       <SoftBox mt={4}>
         <SoftBox mb={1.5}>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={8}>
+            {/* <Grid item xs={12} lg={8}>
               <Grid container spacing={3}>
                 <Grid item xs={12} xl={6}>
                   <MasterCard number={4562112245947852} holder="jack peterson" expires="11/22" />
@@ -66,8 +66,8 @@ function Billing() {
                   <PaymentMethod />
                 </Grid>
               </Grid>
-            </Grid>
-            <Grid item xs={12} lg={4}>
+            </Grid> */}
+            <Grid item xs={12} lg={20}>
               <Invoices />
             </Grid>
           </Grid>
@@ -83,7 +83,7 @@ function Billing() {
           </Grid>
         </SoftBox>
       </SoftBox>
-      <Footer />
+      {/* <Footer /> */}
     </DashboardLayout>
   );
 }

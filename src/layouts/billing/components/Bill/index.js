@@ -24,14 +24,15 @@ import SoftBox from "components/SoftBox";
 import SoftTypography from "components/SoftTypography";
 import SoftButton from "components/SoftButton";
 
-function Bill({ name, company, email, vat, noGutter }) {
+function Bill({ name, company, email, vat, noGutter, bgcolor}) {
   return (
     <SoftBox
       component="li"
       display="flex"
       justifyContent="space-between"
       alignItems="flex-start"
-      bgColor="grey-100"
+      bgColor={bgcolor}
+      opacity="0.75"
       borderRadius="lg"
       p={3}
       mb={noGutter ? 0 : 1}
@@ -45,7 +46,7 @@ function Bill({ name, company, email, vat, noGutter }) {
           flexDirection={{ xs: "column", sm: "row" }}
           mb={2}
         >
-          <SoftTypography variant="button" fontWeight="medium" textTransform="capitalize">
+          <SoftTypography variant="button" fontWeight="medium" textTransform="capitalize" color="white">
             {name}
           </SoftTypography>
 
@@ -56,34 +57,34 @@ function Bill({ name, company, email, vat, noGutter }) {
             ml={{ xs: -1.5, sm: 0 }}
           >
             <SoftBox mr={1}>
-              <SoftButton variant="text" color="error">
-                <Icon>delete</Icon>&nbsp;delete
+              <SoftButton variant="text" color="black">
+                <Icon>download</Icon>&nbsp;Error Report
               </SoftButton>
             </SoftBox>
-            <SoftButton variant="text" color="dark">
-              <Icon>edit</Icon>&nbsp;edit
+            <SoftButton variant="text" color="black">
+              <Icon>download</Icon>&nbsp;Coverage Report
             </SoftButton>
           </SoftBox>
         </SoftBox>
         <SoftBox mb={1} lineHeight={0}>
-          <SoftTypography variant="caption" color="text">
-            Company Name:&nbsp;&nbsp;&nbsp;
-            <SoftTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+          <SoftTypography variant="caption" color="white">
+            API failures:&nbsp;&nbsp;&nbsp;
+            <SoftTypography variant="caption" fontWeight="bold" textTransform="capitalize" color="white">
               {company}
             </SoftTypography>
           </SoftTypography>
         </SoftBox>
         <SoftBox mb={1} lineHeight={0}>
-          <SoftTypography variant="caption" color="text">
-            Email Address:&nbsp;&nbsp;&nbsp;
-            <SoftTypography variant="caption" fontWeight="medium">
+          <SoftTypography variant="caption" color="white">
+            P0 API failures:&nbsp;&nbsp;&nbsp;
+            <SoftTypography variant="caption" fontWeight="bold" color="white">
               {email}
             </SoftTypography>
           </SoftTypography>
         </SoftBox>
-        <SoftTypography variant="caption" color="text">
-          VAT Number:&nbsp;&nbsp;&nbsp;
-          <SoftTypography variant="caption" fontWeight="medium">
+        <SoftTypography variant="caption" color="white">
+          Risk:&nbsp;&nbsp;&nbsp;
+          <SoftTypography variant="caption" fontWeight="bold" color="white">
             {vat}
           </SoftTypography>
         </SoftTypography>
@@ -104,6 +105,7 @@ Bill.propTypes = {
   email: PropTypes.string.isRequired,
   vat: PropTypes.string.isRequired,
   noGutter: PropTypes.bool,
+  bgcolor: PropTypes.string
 };
 
 export default Bill;
