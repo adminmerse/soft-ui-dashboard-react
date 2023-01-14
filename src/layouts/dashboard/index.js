@@ -48,10 +48,10 @@ function Dashboard() {
 
   return (
     <DashboardLayout>
-      <DashboardNavbar />
+      {/* <DashboardNavbar /> */}
       <SoftBox py={3}>
         <SoftBox mb={3}>
-          <Grid container spacing={3}>
+          {/* <Grid container spacing={3}>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
                 title={{ text: "today's money" }}
@@ -87,7 +87,7 @@ function Dashboard() {
                 }}
               />
             </Grid>
-          </Grid>
+          </Grid> */}
         </SoftBox>
         <SoftBox mb={3}>
           <Grid container spacing={3}>
@@ -95,8 +95,11 @@ function Dashboard() {
               <BuildByDevelopers />
             </Grid>
             <Grid item xs={12} lg={5}>
-              <WorkWithTheRockets />
+              <BuildByDevelopers />
             </Grid>
+            {/* <Grid item xs={12} lg={5}>
+              <WorkWithTheRockets />
+            </Grid> */}
           </Grid>
         </SoftBox>
         <SoftBox mb={3}>
@@ -144,7 +147,7 @@ function Dashboard() {
           </Grid>
         </Grid>
       </SoftBox>
-      <Footer />
+      {/* <Footer /> */}
     </DashboardLayout>
   );
 }

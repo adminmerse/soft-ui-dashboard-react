@@ -47,16 +47,16 @@ export default function data() {
 
   return {
     columns: [
-      { name: "companies", align: "left" },
-      { name: "members", align: "left" },
-      { name: "budget", align: "center" },
-      { name: "completion", align: "center" },
+      { name: "time", align: "left" },
+      { name: "commits", align: "left" },
+      { name: "API", align: "center", title:"API Covered"},
+      { name: "risk", align: "center" },
     ],
 
     rows: [
       {
-        companies: [logoXD, "Soft UI XD Version"],
-        members: (
+        time: [logoXD, "5 hours ago"],
+        commits: (
           <SoftBox display="flex" py={1}>
             {avatars([
               [team1, "Ryan Tompson"],
@@ -66,121 +66,63 @@ export default function data() {
             ])}
           </SoftBox>
         ),
-        budget: (
+        API: (
           <SoftTypography variant="caption" color="text" fontWeight="medium">
-            $14,000
+            24
           </SoftTypography>
         ),
-        completion: (
+        risk: (
           <SoftBox width="8rem" textAlign="left">
-            <SoftProgress value={60} color="info" variant="gradient" label={false} />
+            <SoftProgress value={90} color="success" variant="gradient" label={false} />
           </SoftBox>
         ),
       },
       {
-        companies: [logoAtlassian, "Add Progress Track"],
-        members: (
+        time: [logoXD, "24 hours ago"],
+        commits: (
           <SoftBox display="flex" py={1}>
             {avatars([
+              [team1, "Ryan Tompson"],
               [team2, "Romina Hadid"],
+              [team3, "Alexander Smith"],
               [team4, "Jessica Doe"],
             ])}
           </SoftBox>
         ),
-        budget: (
+        API: (
           <SoftTypography variant="caption" color="text" fontWeight="medium">
-            $3,000
+            27
           </SoftTypography>
         ),
-        completion: (
+        risk: (
           <SoftBox width="8rem" textAlign="left">
-            <SoftProgress value={10} color="info" variant="gradient" label={false} />
+            <SoftProgress value={50} color="info" variant="gradient" label={false} />
           </SoftBox>
         ),
       },
       {
-        companies: [logoSlack, "Fix Platform Errors"],
-        members: (
+        time: [logoXD, "2 days ago"],
+        commits: (
           <SoftBox display="flex" py={1}>
             {avatars([
               [team1, "Ryan Tompson"],
-              [team3, "Alexander Smith"],
-            ])}
-          </SoftBox>
-        ),
-        budget: (
-          <SoftTypography variant="caption" color="text" fontWeight="medium">
-            Not set
-          </SoftTypography>
-        ),
-        completion: (
-          <SoftBox width="8rem" textAlign="left">
-            <SoftProgress value={100} color="success" variant="gradient" label={false} />
-          </SoftBox>
-        ),
-      },
-      {
-        companies: [logoSpotify, "Launch our Mobile App"],
-        members: (
-          <SoftBox display="flex" py={1}>
-            {avatars([
-              [team4, "Jessica Doe"],
-              [team3, "Alexander Smith"],
               [team2, "Romina Hadid"],
-              [team1, "Ryan Tompson"],
-            ])}
-          </SoftBox>
-        ),
-        budget: (
-          <SoftTypography variant="caption" color="text" fontWeight="medium">
-            $20,500
-          </SoftTypography>
-        ),
-        completion: (
-          <SoftBox width="8rem" textAlign="left">
-            <SoftProgress value={100} color="success" variant="gradient" label={false} />
-          </SoftBox>
-        ),
-      },
-      {
-        companies: [logoJira, "Add the New Pricing Page"],
-        members: (
-          <SoftBox display="flex" py={1}>
-            {avatars([[team4, "Jessica Doe"]])}
-          </SoftBox>
-        ),
-        budget: (
-          <SoftTypography variant="caption" color="text" fontWeight="medium">
-            $500
-          </SoftTypography>
-        ),
-        completion: (
-          <SoftBox width="8rem" textAlign="left">
-            <SoftProgress value={25} color="info" variant="gradient" label={false} />
-          </SoftBox>
-        ),
-      },
-      {
-        companies: [logoInvesion, "Redesign New Online Shop"],
-        members: (
-          <SoftBox display="flex" py={1}>
-            {avatars([
-              [team1, "Ryan Tompson"],
+              [team3, "Alexander Smith"],
               [team4, "Jessica Doe"],
             ])}
           </SoftBox>
         ),
-        budget: (
+        API: (
           <SoftTypography variant="caption" color="text" fontWeight="medium">
-            $2,000
+            27
           </SoftTypography>
         ),
-        completion: (
+        risk: (
           <SoftBox width="8rem" textAlign="left">
-            <SoftProgress value={40} color="info" variant="gradient" label={false} />
+            <SoftProgress value={10} color="error" variant="gradient" label={false} />
           </SoftBox>
         ),
-      },
+      }
     ],
   };
 }

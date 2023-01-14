@@ -35,21 +35,20 @@ function BuildByDevelopers() {
             <SoftBox display="flex" flexDirection="column" height="100%">
               <SoftBox pt={1} mb={0.5}>
                 <SoftTypography variant="body2" color="text" fontWeight="medium">
-                  Build by developers
+                  Last Run
                 </SoftTypography>
               </SoftBox>
               <SoftTypography variant="h5" fontWeight="bold" gutterBottom>
-                Soft UI Dashboard
+                5 hours ago
               </SoftTypography>
               <SoftBox mb={6}>
-                <SoftTypography variant="body2" color="text">
-                  From colors, cards, typography to complex elements, you will find the full
-                  documentation.
+                <SoftTypography variant="body2" color="success" fontWeight="bold">
+                  Release auto signed-off
                 </SoftTypography>
               </SoftBox>
               <SoftTypography
                 component="a"
-                href="#"
+                href="/tables"
                 variant="button"
                 color="text"
                 fontWeight="medium"
@@ -71,7 +70,7 @@ function BuildByDevelopers() {
                   },
                 }}
               >
-                Read More
+                More Details
                 <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
               </SoftTypography>
             </SoftBox>

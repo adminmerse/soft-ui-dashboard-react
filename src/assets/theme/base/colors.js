@@ -96,6 +96,11 @@ const colors = {
     900: "#212529",
   },
 
+  merse: {
+    main: "#f80454",
+    focus: "#344767",
+  },
+
   gradients: {
     primary: {
       main: "#7928ca",

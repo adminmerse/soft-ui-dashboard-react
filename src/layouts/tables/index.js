@@ -56,9 +56,9 @@ function Tables() {
 
   return (
     <DashboardLayout>
-      <DashboardNavbar />
+      {/* <DashboardNavbar /> */}
       <SoftBox py={3}>
-        <SoftBox mb={3}>
+        {/* <SoftBox mb={3}>
           <Card>
             <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
               <SoftTypography variant="h6">Authors table</SoftTypography>
@@ -76,10 +76,10 @@ function Tables() {
               <Table columns={columns} rows={flows} />
             </SoftBox>
           </Card>
-        </SoftBox>
+        </SoftBox> */}
         <Card>
           <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
-            <SoftTypography variant="h6">Projects table</SoftTypography>
+            <SoftTypography variant="h6">Auto generated Test Suites</SoftTypography>
           </SoftBox>
           <SoftBox
             sx={{
@@ -95,7 +95,7 @@ function Tables() {
           </SoftBox>
         </Card>
       </SoftBox>
-      <Footer />
+      {/* <Footer /> */}
     </DashboardLayout>
   );
 }

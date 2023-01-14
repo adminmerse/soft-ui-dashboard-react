@@ -36,104 +36,74 @@ const action = (
 
 const projectsTableData = {
   columns: [
-    { name: "project", align: "left" },
-    { name: "budget", align: "left" },
-    { name: "status", align: "left" },
-    { name: "completion", align: "center" },
+    { name: "type", align: "left" },
+    { name: "Run", align: "left" },
+    { name: "Priority", align: "left" },
+    { name: "Risk", align: "center" },
     { name: "action", align: "center" },
   ],
 
   rows: [
     {
-      project: [logoSpotify, "Spotift"],
-      budget: (
+      type: [logoSpotify, "Login"],
+      Run: (
         <SoftTypography variant="button" color="text" fontWeight="medium">
-          $2,500
+          5 hours ago
         </SoftTypography>
       ),
-      status: (
+      Priority: (
         <SoftTypography variant="caption" color="text" fontWeight="medium">
-          working
+          P0
         </SoftTypography>
       ),
-      completion: <Completion value={60} color="info" />,
+      Risk: <Completion value={60} color="error" />,
       action,
     },
     {
-      project: [logoInvesion, "Invesion"],
-      budget: (
+      type: [logoSpotify, "Transaction"],
+      Run: (
         <SoftTypography variant="button" color="text" fontWeight="medium">
-          $5,000
+          18 hours ago
         </SoftTypography>
       ),
-      status: (
+      Priority: (
         <SoftTypography variant="caption" color="text" fontWeight="medium">
-          done
+          P0
         </SoftTypography>
       ),
-      completion: <Completion value={100} color="success" />,
+      Risk: <Completion value={4} color="success" />,
       action,
     },
     {
-      project: [logoJira, "Jira"],
-      budget: (
+      type: [logoSpotify, "Portfolio Management"],
+      Run: (
         <SoftTypography variant="button" color="text" fontWeight="medium">
-          $3,400
+          12 hours ago
         </SoftTypography>
       ),
-      status: (
+      Priority: (
         <SoftTypography variant="caption" color="text" fontWeight="medium">
-          canceled
+          P1
         </SoftTypography>
       ),
-      completion: <Completion value={30} color="error" />,
+      Risk: <Completion value={40} color="info" />,
       action,
     },
     {
-      project: [logoSlack, "Slack"],
-      budget: (
+      type: [logoSpotify, "Multiaccount Management"],
+      Run: (
         <SoftTypography variant="button" color="text" fontWeight="medium">
-          $1,400
+          1 day ago
         </SoftTypography>
       ),
-      status: (
+      Priority: (
         <SoftTypography variant="caption" color="text" fontWeight="medium">
-          canceled
+          P2
         </SoftTypography>
       ),
-      completion: <Completion value={0} color="error" />,
+      Risk: <Completion value={70} color="error" />,
       action,
-    },
-    {
-      project: [logoWebDev, "Webdev"],
-      budget: (
-        <SoftTypography variant="button" color="text" fontWeight="medium">
-          $14,000
-        </SoftTypography>
-      ),
-      status: (
-        <SoftTypography variant="caption" color="text" fontWeight="medium">
-          working
-        </SoftTypography>
-      ),
-      completion: <Completion value={80} color="info" />,
-      action,
-    },
-    {
-      project: [logoXD, "Adobe XD"],
-      budget: (
-        <SoftTypography variant="button" color="text" fontWeight="medium">
-          $2,300
-        </SoftTypography>
-      ),
-      status: (
-        <SoftTypography variant="caption" color="text" fontWeight="medium">
-          done
-        </SoftTypography>
-      ),
-      completion: <Completion value={100} color="success" />,
-      action,
-    },
+    }
   ],
 };
 

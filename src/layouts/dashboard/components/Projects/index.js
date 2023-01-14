@@ -64,7 +64,7 @@ function Projects() {
       <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <SoftBox>
           <SoftTypography variant="h6" gutterBottom>
-            Projects
+            Runs
           </SoftTypography>
           <SoftBox display="flex" alignItems="center" lineHeight={0}>
             <Icon
@@ -77,7 +77,7 @@ function Projects() {
               done
             </Icon>
             <SoftTypography variant="button" fontWeight="regular" color="text">
-              &nbsp;<strong>30 done</strong> this month
+              &nbsp;<strong>3 done</strong> in the past 48 hours
             </SoftTypography>
           </SoftBox>
         </SoftBox>
